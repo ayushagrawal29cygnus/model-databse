@@ -1,0 +1,24 @@
+import csv
+from datetime import datetime
+
+def save_to_csv(vehicle_id, people_count, confidence):
+    # Generate filename
+    csv_filename = f"{vehicle_id}_occupancy_{datetime.now().strftime('%Y-%m-%d')}.csv"
+    
+    # Write/append data
+    with open(csv_filename, "a", newline="") as f:
+        writer = csv.writer(f)
+        # Write header if file is empty
+        if f.tell() == 0:
+            writer.writerow(["timestamp", "vehicle_id", "occupancy", "confidence"])
+        # Write data row
+        writer.writerow([
+            datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+            vehicle_id,
+            people_count,
+            round(confidence, 2)
+        ])
+
+# Usage with YOLOv8
+results = model(frame, verbose=False)
+save_to_csv("BUS-101", len(results[0].boxes), results[0].speed["inference"])
