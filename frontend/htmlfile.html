@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time Bus Tracker</title>
+    <script src="jsfile.js" defer></script>
+    
+    <link rel="stylesheet" href="cssfile.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header-content">
+                <div class="header-text">
+                    <h1>Real-Time Bus Tracker</h1>
+                    <p>Track your bus location and arrival time instantly</p>
+                </div>
+                <div class="header-image">
+                    <img src="/api/placeholder/150/80" alt="Bus Icon" class="bus-icon">
+                </div>
+            </div>
+        </div>
+        
+        <div class="welcome-section">
+            <div class="welcome-text">
+                <h2>Welcome to Bus Tracker</h2>
+                <p>Our real-time bus tracking system helps you find and track buses across the city. Never miss your bus again!</p>
+                <p>Simply enter your route number or location details in the search box below to get started.</p>
+            </div>
+            <div class="cartoon-map">
+                <img src="/api/placeholder/500/250" alt="City Map" class="map-placeholder">
+            </div>
+        </div>
+        
+        <div class="bus-illustrations">
+            <div class="bus-illustration">
+                <img src="/api/placeholder/300/150" alt="City Bus">
+                <h3>City Routes</h3>
+                <p>Regular routes within the city center</p>
+            </div>
+            <div class="bus-illustration">
+                <img src="/api/placeholder/300/150" alt="Express Bus">
+                <h3>Express Routes</h3>
+                <p>Fast connections between major hubs</p>
+            </div>
+            <div class="bus-illustration">
+                <img src="/api/placeholder/300/150" alt="Airport Bus">
+                <h3>Airport Shuttles</h3>
+                <p>Direct service to and from airports</p>
+            </div>
+        </div>
+        
+        <div class="how-it-works">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3>Enter Route</h3>
+                <p>Input your route number or locations</p>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3>Find Buses</h3>
+                <p>View available buses on your route</p>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <h3>Track Real-Time</h3>
+                <p>See exactly where your bus is now</p>
+            </div>
+        </div>
+        
+        <div class="search-section">
+            <div class="error-message" id="errorMessage"></div>
+            <div class="search-container">
+                <div class="input-group">
+                    <label for="routeNumber">Route Number</label>
+                    <input type="text" id="routeNumber" placeholder="e.g. 42, 103">
+                </div>
+                <div class="input-group">
+                    <label for="startLocation">Start Location</label>
+                    <input type="text" id="startLocation" placeholder="e.g. Downtown">
+                </div>
+                <div class="input-group">
+                    <label for="endLocation">End Location</label>
+                    <input type="text" id="endLocation" placeholder="e.g. Airport">
+                </div>
+                <button class="btn" id="searchBtn">Track Now</button>
+            </div>
+        </div>
+        
+        <div class="results-section">
+            <h2>Bus Details</h2>
+            <div id="resultsContainer"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

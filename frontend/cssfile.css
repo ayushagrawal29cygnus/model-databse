@@ -1,0 +1,408 @@
+/* Main Styles for Real-Time Bus Tracker */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f5f7fa;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Styles */
+.header {
+    text-align: center;
+    padding: 30px 0;
+    background: linear-gradient(135deg, #3494e6, #ec6ead);
+    color: white;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+}
+
+.header-text {
+    text-align: left;
+    z-index: 2;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.header-image {
+    z-index: 2;
+}
+
+.bus-icon {
+    width: 150px;
+    height: auto;
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('/api/placeholder/1200/300');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.1;
+    z-index: 1;
+}
+
+/* Welcome Section Styles */
+.welcome-section {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: center;
+}
+
+.welcome-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.welcome-text h2 {
+    color: #3494e6;
+    margin-bottom: 15px;
+}
+
+.welcome-text p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.cartoon-map {
+    flex: 1;
+    min-width: 300px;
+    height: 250px;
+    background-color: #f0f7ff;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+}
+
+.map-placeholder {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Bus Illustrations Styles */
+.bus-illustrations {
+    display: flex;
+    justify-content: space-around;
+    margin: 30px 0;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.bus-illustration {
+    text-align: center;
+    flex: 1;
+    min-width: 200px;
+    max-width: 300px;
+    padding: 15px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.bus-illustration:hover {
+    transform: translateY(-5px);
+}
+
+.bus-illustration img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+.bus-illustration h3 {
+    color: #3494e6;
+    margin-bottom: 5px;
+}
+
+/* How It Works Styles */
+.how-it-works {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.step {
+    flex: 1;
+    min-width: 200px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.step-number {
+    display: inline-block;
+    background: linear-gradient(135deg, #3494e6, #ec6ead);
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    line-height: 40px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.step h3 {
+    margin-bottom: 10px;
+    color: #3494e6;
+}
+
+/* Search Section Styles */
+.search-section {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.search-container {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.input-group {
+    flex: 1;
+    min-width: 200px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #555;
+}
+
+.input-group input, .input-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.input-group input:focus, .input-group select:focus {
+    border-color: #3494e6;
+    outline: none;
+}
+
+.btn {
+    background: linear-gradient(135deg, #3494e6, #ec6ead);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: transform 0.2s, box-shadow 0.2s;
+    margin-top: 28px;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Results Section Styles */
+.results-section {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.bus-card {
+    background-color: #f8f9fa;
+    border-left: 4px solid #3494e6;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s;
+    cursor: pointer;
+}
+
+.bus-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.bus-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.bus-number {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #3494e6;
+}
+
+.bus-route {
+    font-weight: 600;
+}
+
+.bus-status {
+    display: flex;
+    gap: 30px;
+}
+
+.status-item {
+    text-align: center;
+}
+
+.status-label {
+    font-size: 0.8rem;
+    color: #777;
+    margin-bottom: 5px;
+}
+
+.status-value {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.on-time {
+    color: #2ecc71;
+}
+
+.delayed {
+    color: #e74c3c;
+}
+
+.map-container {
+    height: 300px;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-top: 20px;
+    display: none;
+}
+
+/* Loading & Error Styles */
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+}
+
+.loading-spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-left: 4px solid #3494e6;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.no-results {
+    text-align: center;
+    padding: 40px 0;
+    color: #777;
+}
+
+.error-message {
+    background-color: #fff5f5;
+    border-left: 4px solid #e74c3c;
+    padding: 15px;
+    color: #e74c3c;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .search-container {
+        flex-direction: column;
+    }
+    
+    .btn {
+        width: 100%;
+        margin-top: 15px;
+    }
+    
+    .bus-info {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .bus-status {
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    .header-content {
+        flex-direction: column;
+    }
+    
+    .header-text {
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    
+    .welcome-section {
+        flex-direction: column;
+    }
+    
+    .how-it-works {
+        flex-direction: column;
+    }
